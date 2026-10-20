@@ -135,11 +135,10 @@ table {
   background-color: var(--background-color);
 }
 
-#hero{
+#hero {
   height: 100vh;
   overflow: hidden;
 }
-
 
 #skills,
 #experiences,
@@ -204,12 +203,37 @@ table {
 }
 
 #hero .side .right {
-  border-radius: 20px;
+  position: relative;
+  width: 30%;
+}
+
+#hero .side .right .img-container {
+  height: 250px;
+  width: 250px;
+  position: absolute;
   overflow: hidden;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}
+
+#hero .side .right .image-cadre {
+  width: 250px;
+  height: 250px;
+  border: 3px solid var(--text-color);
+  position: absolute;
+  top: 50%;
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: 1px 1px 10px var(--text-color);
 }
 
 #hero .side .right img {
-  width: 300px;
+  width: 250px;
 }
 
 @media (max-width: 835px) {
@@ -221,12 +245,16 @@ table {
   }
 }
 
-#skills, #experiences, #contact {
+#skills,
+#experiences,
+#contact {
   display: flex;
   align-items: center;
 }
 
-#skills .side, #experiences .side, #contact .side {
+#skills .side,
+#experiences .side,
+#contact .side {
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -246,7 +274,9 @@ table {
   } */
 }
 
-#skills .side .right, #experiences .side .right, #contact .side .right {
+#skills .side .right,
+#experiences .side .right,
+#contact .side .right {
   width: 50%;
 }
 
@@ -306,7 +336,7 @@ table {
   font-style: italic;
   font-weight: 500;
   margin-bottom: 0.5rem;
-} 
+}
 
 #experiences .side .right .detail ul li {
   margin-bottom: 1rem;
@@ -320,7 +350,6 @@ table {
   width: 100%;
   margin-top: 15px;
 }
-
 
 #contact .side .left .link .social-media {
   margin: 0 5px;
@@ -360,7 +389,7 @@ table {
   height: 35px;
   border-radius: 20px;
   color: var(--text-color);
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -372,7 +401,7 @@ table {
   border: 1px solid var(--button-color);
   border-radius: 20px;
   color: var(--text-color);
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   font-family: "Montserrat", sans-serif;
 }
 

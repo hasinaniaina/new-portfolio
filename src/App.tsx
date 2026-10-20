@@ -87,7 +87,10 @@ function App() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.1 }}
           >
-            <img src={profil} alt="Mon profil" />
+            <div className="image-cadre"></div>
+            <div className="img-container">
+              <img src={profil} alt="Mon profil" />
+            </div>
           </motion.div>
         </div>
       </section>
