@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Manjari:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --text-color: #eeeef0;
+  --button-color: #797b86;
+  --background-color: #111113;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.3;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.background {
+  background-color: var(--background-color);
+}
+
+#hero{
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+#skills,
+#experiences,
+#contact {
+  height: 100%;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+#hero .side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+#hero .side .left {
+  width: 50%;
+}
+
+@media (max-width: 835px) {
+  #hero .side .left {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+#hero .side .left h1 {
+  margin-bottom: 10px;
+}
+
+#hero .side .left .link {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#hero .side .left .link .download-cv {
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  border: 0;
+  border-radius: 10px;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-right: 20px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+#hero .side .left .link .download-cv:hover {
+  cursor: pointer;
+  background-color: var(--background-color);
+  border: 1px var(--text-color) solid;
+}
+
+#hero .side .left .link .social-media {
+  margin: 0 5px;
+  font-size: 25px;
+  color: var(--text-color);
+}
+
+#hero .side .right {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#hero .side .right img {
+  width: 300px;
+}
+
+@media (max-width: 835px) {
+  #hero .side .right {
+    display: none;
+  }
+  #hero .side .right img {
+    display: none;
+  }
+}
+
+#skills, #experiences, #contact {
+  display: flex;
+  align-items: center;
+}
+
+#skills .side, #experiences .side, #contact .side {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+@media (max-width: 908px) {
+  #skills .side {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 908px) {
+  /* #skills .side .left h1 {
+    text-align: center;
+  } */
+}
+
+#skills .side .right, #experiences .side .right, #contact .side .right {
+  width: 50%;
+}
+
+@media (max-width: 908px) {
+  #skills .side .right {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+#skills .side .right p {
+  margin-bottom: 40px;
+}
+
+#skills .side .right .list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+}
+
+#skills .side .right .list li {
+  list-style-type: none;
+  background-color: var(--background-color);
+  border: 1px var(--text-color) solid;
+  padding: 20px 0;
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin: 10px 10px;
+  text-align: center;
+}
+
+@media (max-width: 730px) {
+  #experiences .side {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+  }
+
+  #experiences .side .left h1 {
+    margin-bottom: 2rem;
+  }
+
+  #experiences .side .right {
+    width: 100%;
+  }
+}
+
+#experiences .side .right .first {
+  margin-bottom: 3rem;
+}
+
+#experiences .side .right .title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#experiences .side .right .year {
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+} 
+
+#experiences .side .right .detail ul li {
+  margin-bottom: 1rem;
+  list-style: circle;
+}
+
+#contact .side .left .link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 15px;
+}
+
+
+#contact .side .left .link .social-media {
+  margin: 0 5px;
+  font-size: 30px;
+  color: var(--text-color);
+}
+
+#contact .side .right .field {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 845px) {
+  #contact .side {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+  }
+
+  #contact .side .left h1 {
+    margin-bottom: 2rem;
+  }
+
+  #contact .side .right {
+    width: 100%;
+  }
+}
+
+#contact .side .right .field p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#contact .side .right .field input {
+  background-color: transparent;
+  border: 1px solid var(--button-color);
+  width: 100%;
+  height: 35px;
+  border-radius: 20px;
+  color: var(--text-color);
+  padding: 0 .5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+#contact .side .right .field textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  background-color: transparent;
+  border: 1px solid var(--button-color);
+  border-radius: 20px;
+  color: var(--text-color);
+  padding: 1rem .5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+#contact .side .right .field:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#contact .side .right .field button {
+  padding: 20px 30px;
+  background-color: var(--button-color);
+  border: 0;
+  border-radius: 10px;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#contact .side .right .field button:hover {
+  cursor: pointer;
+  background-color: var(--background-color);
+  border: 1px var(--text-color) solid;
+}
+
+#contact .side .right .field span {
+  margin-left: 2px;
+  color: #f02828;
+}
