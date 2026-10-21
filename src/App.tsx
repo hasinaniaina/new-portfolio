@@ -39,7 +39,7 @@ function App() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              Hasinaniaina harilanto.
+              Hasinaniaina Harilanto.
             </motion.h1>
             <motion.p
               initial={{ x: -100, opacity: 0 }}
