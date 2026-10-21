@@ -3,12 +3,14 @@ import emailjs from "@emailjs/browser";
 import { motion } from "motion/react";
 
 function Contact() {
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState("");
 
-  const sendEmail = async (e) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Envoi en cours...");
+
+    if (!form.current) return;
 
     try {
       await emailjs.sendForm(

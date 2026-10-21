@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Contact from "./contact";
 import { motion } from "motion/react";
-import type { animate } from "motion";
 
 function App() {
   const skillsList: string[] = [
